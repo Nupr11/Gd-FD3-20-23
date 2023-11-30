@@ -1,0 +1,8 @@
+.product {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border: 1px solid rgb(21, 62, 168);
+  box-shadow: 0 0 5px 1px rgb(21, 62, 168);
+}
