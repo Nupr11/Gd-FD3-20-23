@@ -1,0 +1,17 @@
+.button {
+  width: 120px;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: rgba(16, 29, 168, 0.1);
+  border-radius: 5px;
+}
+
+.buttonSave {
+  width: 100px;
+  padding: 8px;
+
+  transition: 0.3s;
+  background-color: rgba(3, 202, 242, 0.262);
+  margin-right: 16px;
+}

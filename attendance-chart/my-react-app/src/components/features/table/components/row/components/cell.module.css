@@ -1,0 +1,8 @@
+.info {
+  font-size: 10px;
+}
+
+.active {
+  transition: 0.9s;
+  background-color: rgba(16, 29, 168, 0.579);
+}

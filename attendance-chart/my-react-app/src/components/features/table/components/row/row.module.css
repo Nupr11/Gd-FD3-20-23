@@ -1,0 +1,24 @@
+.td,
+.th,
+.active {
+  padding: 5px;
+  width: 120px;
+  background-color: #00abfd;
+  border: 0.5px solid black;
+}
+.active {
+  background-color: #00abfd;
+}
+.th {
+  background-color: rgba(16, 29, 168, 0.579);
+}
+
+.th > span {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.td {
+  text-align: center;
+  cursor: pointer;
+}

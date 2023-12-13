@@ -1,0 +1,33 @@
+.tHead,
+.tBody {
+  display: flex;
+}
+
+.column,
+.thEmpty {
+  padding: 5px;
+  width: 200px;
+  font-weight: 700;
+  background-color: rgba(16, 29, 168, 0.579);
+  border: 0.5px solid black;
+}
+
+.controller {
+  margin-top: 32px;
+  padding: 16px 8px;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(
+    to right bottom,
+    #3d8afd,
+    #00abfd,
+    #00c1e0,
+    #3bd1bd,
+    #9cdba8
+  );
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
