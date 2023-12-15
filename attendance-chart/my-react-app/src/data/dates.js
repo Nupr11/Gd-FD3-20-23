@@ -28,12 +28,10 @@ const generateDates = (start, end) => {
 
 const OUTPUT_DATES = generateDates(START_DATE, FINISH_DATE);
 
-const ACADEMY_LESSONS = OUTPUT_DATES.map((item) => {
+export const ACADEMY_LESSONS = OUTPUT_DATES.map((item) => {
   const date = item.getDate();
   const month = item.getMonth() + 1;
   const year = item.getFullYear();
 
   return `${year}-${month}-${date}`;
 });
-
-export { ACADEMY_LESSONS };

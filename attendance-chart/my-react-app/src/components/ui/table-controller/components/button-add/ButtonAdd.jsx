@@ -1,4 +1,4 @@
-export const AddButton = ({ className, text, onAdd }) => {
+export const ButtonAdd = ({ className, text, onAdd }) => {
   return (
     <button
       key={`button-${className}`}

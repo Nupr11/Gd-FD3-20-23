@@ -1,0 +1,10 @@
+.student,
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 70px;
+  border: 1px solid #000;
+  background-color: #5c998f;
+}

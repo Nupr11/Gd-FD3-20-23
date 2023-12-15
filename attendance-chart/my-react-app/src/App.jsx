@@ -1,12 +1,10 @@
 import { Table } from "./components/features/table";
-import style from "./main.module.css";
-// import { output } from "./data/dates";
-// import { students } from "./data/students";
+import styles from "./main.module.css";
 
 const App = () => {
   return (
     <div className="App">
-      <Table className={style.table}></Table>
+      <Table className={styles.table}></Table>
     </div>
   );
 };

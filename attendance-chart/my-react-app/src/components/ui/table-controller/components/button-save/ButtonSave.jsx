@@ -1,21 +1,22 @@
+import styles from "./save-button.module.css";
 import { useState } from "react";
-import style from "./save-button.module.css";
 
-export const ButtonSave = ({ className }) => {
+export const ButtonSave = ({ className, classNameActive, save }) => {
   const [saving, setSaving] = useState(false);
   const handleSaving = () => {
     setSaving(true);
+    save();
     setTimeout(() => setSaving(false), 2000);
   };
   return (
     <button
       key={`button-${className}`}
-      className={`${className} ${saving ? style.clicked : ""}`}
+      className={`${className} ${saving ? classNameActive : ""}`}
       type="button"
       onClick={handleSaving}
       disabled={saving}
     >
-      <span className="button-text">{saving ? "saving..." : "save"}</span>
+      <span className={styles.buttonText}>{saving ? "Saving..." : "Save"}</span>
     </button>
   );
 };

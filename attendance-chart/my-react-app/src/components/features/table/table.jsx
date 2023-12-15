@@ -1,53 +1,86 @@
-import style from "./table.module.css";
-import { useState } from "react";
+import styles from "./Table.module.css";
+import { saveData, loadData } from "./utils.js";
+import { useState, useEffect } from "react";
 import { ACADEMY_STUDENTS } from "../../../data/students";
 import { ACADEMY_LESSONS } from "../../../data/dates";
-import { Row } from "./components/row";
-import { Cell } from "./components/row/components";
 import { Controller } from "../../ui/table-controller";
+import { TableHead, TableRow } from "./components";
+
+const DEFAULTS = {
+  attendance: { dates: ACADEMY_LESSONS, students: { ...ACADEMY_STUDENTS } },
+};
 
 export const Table = ({ className }) => {
-  const [students, setStudents] = useState(ACADEMY_STUDENTS);
-  const [lessons, setLessons] = useState(ACADEMY_LESSONS);
+  const [attendance, setAttendance] = useState(DEFAULTS.attendance);
 
-  const handleAddStudent = () => {
-    const newStudent = prompt("Enter student's name");
-    setStudents([...students, newStudent]);
+  const handleStudentAdd = () => {
+    const newStudent = prompt("Enter new student's name");
+
+    setAttendance({
+      ...attendance,
+      students: { ...attendance.students, [newStudent]: [] },
+    });
   };
-  const handleAddLesson = () => {
-    const newLesson = prompt("Enter date of lesson");
-    setLessons([...lessons, newLesson]);
+
+  const handleLessonAdd = () => {
+    const newDate = prompt("Enter new lessons's date");
+    setAttendance({ ...attendance, dates: [...attendance.dates, newDate] });
   };
+
+  const handleCellClick = (student, date) => {
+    const currentStudentDates = attendance.students[student];
+
+    const newDates = currentStudentDates.includes(date)
+      ? currentStudentDates.filter((dateItem) => dateItem !== date)
+      : [...currentStudentDates, date];
+
+    const newAttendance = {
+      ...attendance,
+      students: { ...attendance.students, [student]: newDates },
+    };
+
+    setAttendance(newAttendance);
+  };
+
+  const handleClear = () => {
+    setAttendance(DEFAULTS.attendance);
+  };
+
+  const handleSave = () => {
+    saveData("attendance", attendance);
+  };
+
+  // NOTE: load data in first render
+  useEffect(() => {
+    try {
+      const attendance = loadData("attendance");
+
+      DEFAULTS.attendance && setAttendance(attendance);
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
+
   return (
     <>
-      <div className={className} key={className}>
-        <Row className={style.tHead} infoArray={lessons} type="tHead">
-          <Cell
-            className={`${style.thEmpty}`}
-            empty={true}
-            clickAble={false}
-          ></Cell>
-        </Row>
-
-        {students.map((student) => (
-          <Row
-            className={style.tBody}
-            infoArray={lessons}
-            empty={true}
-            type="tBody"
-          >
-            <Cell
-              className={`${style.column}`}
-              cellInfo={student}
-              clickAble={false}
-            ></Cell>
-          </Row>
+      <div className={className}>
+        <TableHead className={styles.TableHead} dates={attendance.dates} />
+        {Object.entries(attendance.students).map(([student, visitDates]) => (
+          <TableRow
+            className={styles.TableRow}
+            dates={attendance.dates}
+            student={student}
+            visitDates={visitDates}
+            onCellClick={handleCellClick}
+          />
         ))}
       </div>
       <Controller
-        className={style.controller}
-        handleAddStudent={handleAddStudent}
-        handleAddLesson={handleAddLesson}
+        className={styles.controller}
+        handleAddStudent={handleStudentAdd}
+        handleAddLesson={handleLessonAdd}
+        onSave={handleSave}
+        onClear={handleClear}
       ></Controller>
     </>
   );

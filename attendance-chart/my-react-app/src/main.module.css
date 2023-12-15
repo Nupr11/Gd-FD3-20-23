@@ -2,3 +2,23 @@
   border: 3px solid black;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+.controller {
+  margin-top: 32px;
+  padding: 16px 8px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  background-image: linear-gradient(
+    to right bottom,
+    #3d8afd,
+    #00abfd,
+    #00c1e0,
+    #3bd1bd,
+    #9cdba8
+  );
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  /* border-radius: 5px; */
+}

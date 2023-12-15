@@ -1,0 +1,27 @@
+.student,
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  width: 200px;
+  height: 70px;
+}
+
+.student {
+  background-color: #97a199;
+  background-color: #5c998f;
+}
+
+.cell {
+  cursor: pointer;
+  transition: 0.7s;
+  opacity: 0.9;
+  box-shadow: inset 0px 0px 0px 0px #5c998f;
+  background-color: #97a199;
+}
+
+.cell_isActive {
+  opacity: 1;
+  box-shadow: inset 0px 0px 30px 40px #5c998f;
+}
