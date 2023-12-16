@@ -4,9 +4,10 @@
 }
 
 .controller {
+  position: fixed;
+  left: 16px;
   margin-top: 32px;
   padding: 16px 8px;
-  width: 100%;
   max-width: 500px;
   display: flex;
   justify-content: space-between;

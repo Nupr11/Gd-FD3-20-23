@@ -15,7 +15,7 @@ export const Table = ({ className }) => {
 
   const handleStudentAdd = () => {
     const newStudent = prompt("Enter new student's name");
-
+    if (newStudent == null) return;
     setAttendance({
       ...attendance,
       students: { ...attendance.students, [newStudent]: [] },
@@ -24,6 +24,7 @@ export const Table = ({ className }) => {
 
   const handleLessonAdd = () => {
     const newDate = prompt("Enter new lessons's date");
+    if (newDate == null) return;
     setAttendance({ ...attendance, dates: [...attendance.dates, newDate] });
   };
 
@@ -64,9 +65,14 @@ export const Table = ({ className }) => {
   return (
     <>
       <div className={className}>
-        <TableHead className={styles.TableHead} dates={attendance.dates} />
+        <TableHead
+          key="head"
+          className={styles.TableHead}
+          dates={attendance.dates}
+        />
         {Object.entries(attendance.students).map(([student, visitDates]) => (
           <TableRow
+            key={`row-${student}`}
             className={styles.TableRow}
             dates={attendance.dates}
             student={student}

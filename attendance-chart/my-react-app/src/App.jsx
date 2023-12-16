@@ -1,9 +1,9 @@
 import { Table } from "./components/features/table";
-import styles from "./main.module.css";
+import styles from "./App.module.css";
 
 const App = () => {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Table className={styles.table}></Table>
     </div>
   );
