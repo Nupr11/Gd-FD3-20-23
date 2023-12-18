@@ -1,0 +1,14 @@
+.button {
+  width: 300px;
+  padding: 4px;
+  cursor: pointer;
+  transition: 0.6s;
+  background-color: #97a199;
+  border-radius: 5px;
+}
+
+.clicked {
+  opacity: 0.6;
+  cursor: default;
+  border: 0;
+}
