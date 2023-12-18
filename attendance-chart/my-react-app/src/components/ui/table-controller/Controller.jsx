@@ -1,4 +1,5 @@
 import style from "./controller.module.css";
+import React from "react";
 import { ButtonSave } from "../../ui/table-controller/components/button-save";
 import { ButtonAdd } from "../../ui/table-controller/components/button-add";
 import { ButtonClear } from "./components/button-clear";

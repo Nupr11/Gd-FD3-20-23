@@ -1,4 +1,5 @@
 import styles from "./Cell.module.css";
+import React from "react";
 
 export const Cell = ({ className, info }) => {
   return (

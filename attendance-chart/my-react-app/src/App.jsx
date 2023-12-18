@@ -1,5 +1,6 @@
-import { Table } from "./components/features/table";
+import { Table } from "./components/features/Table";
 import styles from "./App.module.css";
+import React from "react";
 
 const App = () => {
   return (

@@ -1,4 +1,5 @@
 import styles from "./Table.module.css";
+import React from "react";
 import { saveData, loadData } from "./utils.js";
 import { useState, useEffect } from "react";
 import { ACADEMY_STUDENTS } from "../../../data/students";

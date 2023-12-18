@@ -1,4 +1,5 @@
 import styles from "./TableHead.module.css";
+import React from "react";
 
 export const TableHead = ({ className, dates }) => {
   return (
