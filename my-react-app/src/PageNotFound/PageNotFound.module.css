@@ -1,0 +1,35 @@
+.section {
+  width: max-content;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  background-color: #fff;
+  font-size: 64px;
+  font-family: "Aleo", sans-serif;
+  color: rgba(13, 96, 111);
+}
+
+.imgContainer {
+  max-width: 800px;
+  max-height: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+.img {
+  width: 99.5%;
+  height: 100%;
+  border-right: 1px solid rgba(13, 96, 111);
+  box-shadow: 5px 0px 9px 0px rgba(13, 96, 111);
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title::first-letter,
+.text {
+  text-transform: uppercase;
+}
