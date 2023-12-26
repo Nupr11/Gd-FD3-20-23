@@ -1,14 +1,14 @@
 import styles from "./NavItem.module.css";
 import { NavLink } from "react-router-dom";
 
-export const NavItem = ({ className, routes }) => {
-  const pages = routes.map((page) => (
-    <li key={page.title}>
-      <NavLink className={className} to={page.path}>
-        <span className={styles.navLinkText}>{page.title}</span>
+export const NavItem = ({ className, nav }) => {
+  const navList = nav.map((item) => (
+    <li key={nav.title}>
+      <NavLink className={className} to={item.path}>
+        <span className={styles.navLinkText}>{item.title}</span>
       </NavLink>
     </li>
   ));
 
-  return <>{pages}</>;
+  return <>{navList}</>;
 };

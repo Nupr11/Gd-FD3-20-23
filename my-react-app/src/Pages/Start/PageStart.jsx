@@ -1,4 +1,4 @@
-import styles from "../../MainPage/Main/PageMain.module.css";
+import styles from "../Intro/PageIntro.module.css";
 import { Layout } from "../../components/Layout/Layout";
 import { Section } from "./components/Section";
 import { CONTENT_PARTS } from "./data/data";

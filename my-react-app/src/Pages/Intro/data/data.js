@@ -1,7 +1,5 @@
 import { GENERATE_CONTENT } from "../../../utils";
 
-const SITE_TITLE = "Test Site";
-
 const CONTENT_PARTS = [
   {
     title: "intro",
@@ -22,4 +20,4 @@ const CONTENT_PARTS = [
   },
 ];
 
-export { CONTENT_PARTS, SITE_TITLE };
+export { CONTENT_PARTS };

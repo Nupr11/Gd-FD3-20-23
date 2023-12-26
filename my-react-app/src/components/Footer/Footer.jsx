@@ -1,9 +1,10 @@
 import styles from "./Footer.module.css";
+import { SocialList } from "./components/Social/Social";
 
 export const Footer = ({ className }) => {
   return (
     <section className={className}>
-      <h4 className={styles.FooterTitle}>Footer</h4>
+      <SocialList className={styles.socialList} />
     </section>
   );
 };

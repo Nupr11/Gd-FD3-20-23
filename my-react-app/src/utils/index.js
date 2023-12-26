@@ -1,1 +1,1 @@
-export { GENERATE_CONTENT } from "./utils";
+export { GENERATE_CONTENT, SANITIZE_ITEM } from "./utils";
