@@ -6,12 +6,6 @@
   font-family: "Red Hat Text", sans-serif;
 }
 
-.header,
-.footer {
-  background-color: rgba(242, 120, 92);
-  color: rgba(13, 96, 111);
-}
-
 .header {
   width: 100%;
   position: fixed;
@@ -21,4 +15,16 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+  background-color: rgba(242, 120, 92);
+  color: rgba(13, 96, 111);
+}
+
+.main {
+  justify-content: center;
+  height: 100%;
+}
+
+.footer {
+  background-color: rgba(13, 96, 111);
+  color: rgba(242, 120, 92);
 }

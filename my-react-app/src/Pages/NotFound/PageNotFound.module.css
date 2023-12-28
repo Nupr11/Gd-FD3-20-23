@@ -1,7 +1,7 @@
 .section {
   display: flex;
+  margin: 10% 0;
   flex-direction: row-reverse;
-  justify-content: center;
   background-color: #fff;
   font-size: 64px;
   font-family: "Aleo", sans-serif;
@@ -10,9 +10,9 @@
 
 .imgContainer {
   max-width: 800px;
-  max-height: 800px;
-  overflow: hidden;
+  max-height: 1000px;
   position: relative;
+  overflow: hidden;
 }
 
 .img {

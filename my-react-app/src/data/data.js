@@ -6,7 +6,7 @@ import SVG_INSTAGRAM from "../assets/svg/instagram.svg";
 
 const SITE_NAME = {
   title: "Test Site",
-  path: "/",
+  path: "/start",
 };
 
 const NAV_LINKS = [

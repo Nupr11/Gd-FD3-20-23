@@ -1,12 +1,11 @@
 import styles from "./Header.module.css";
-import { Nav } from "./components/Navigation/Nav";
-import { Logo } from "./components/Logo/Logo";
+import { Nav, Logo } from "../Header/components";
 
-export const Header = ({ className, site, nav, userId }) => {
+export const Header = ({ className, nav, userId }) => {
   return (
-    <section className={className}>
-      <Logo userId={userId} className={styles.logo} site={site}></Logo>
+    <header className={className}>
+      <Logo userId={userId} className={styles.logo}></Logo>
       <Nav className={styles.nav} nav={nav}></Nav>
-    </section>
+    </header>
   );
 };
