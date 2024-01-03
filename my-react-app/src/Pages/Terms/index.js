@@ -1,0 +1,1 @@
+export { PageTerms } from "./PageTerms";

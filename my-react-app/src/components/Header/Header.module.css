@@ -1,0 +1,10 @@
+.nav {
+  margin: 0 8px;
+  display: flex;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.logo {
+  text-decoration: none;
+}

@@ -1,0 +1,12 @@
+.contentTitle::first-letter {
+  text-transform: uppercase;
+}
+
+.contentTitle {
+  margin: 8px 0;
+}
+
+.content {
+  text-indent: 32px;
+  background-color: rgba(13, 96, 111);
+}
