@@ -1,0 +1,14 @@
+.panelWrapper {
+  width: 500px;
+  padding: 16px;
+}
+
+.buttonPanel,
+.timerPanel {
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  background-color: #808080;
+}
