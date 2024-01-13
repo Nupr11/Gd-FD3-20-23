@@ -1,0 +1,19 @@
+.panelWrapper {
+  width: 500px;
+  padding: 16px;
+}
+
+.buttonPanel,
+.timerList {
+  color: #fff;
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  background-color: rgb(111, 111, 187);
+}
+
+.speed {
+  color: rgb(111, 111, 187);
+}
