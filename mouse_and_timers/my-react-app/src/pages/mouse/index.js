@@ -1,1 +1,1 @@
-export { Mouse } from "./Mouse";
+export { MousePage } from "./MousePage";

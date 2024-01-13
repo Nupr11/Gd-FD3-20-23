@@ -20,19 +20,13 @@ const pages = [
 const TIMERS_NUMBER = 3;
 
 //for component Timers
-let TIMER_DATA_COMMON = {
+const DEFAULTS = {
   start: 0,
   speed: 1,
-  step: 1000,
+  step: 1,
   interval: 1000,
+  pause: 0,
 };
-
-//for component Timers
-const TIMERS_DATA = [
-  { ...TIMER_DATA_COMMON, id: 1 },
-  { ...TIMER_DATA_COMMON, id: 2, isSave: true },
-  { ...TIMER_DATA_COMMON, id: 3, isBgRun: true },
-];
 
 //for component Timers
 const BUTTONS_DATA = [
@@ -57,7 +51,7 @@ const BUTTONS_DATA = [
   },
 ];
 
-export { pages, AXIS_X, AXIS_Y, TIMERS_DATA, BUTTONS_DATA };
+export { pages, AXIS_X, AXIS_Y, DEFAULTS, BUTTONS_DATA };
 
 //specification
 const TASK = [

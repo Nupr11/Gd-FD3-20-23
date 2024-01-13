@@ -1,1 +1,1 @@
-export { Timers } from "./Timers";
+export { TimersPage } from "./TimersPage";

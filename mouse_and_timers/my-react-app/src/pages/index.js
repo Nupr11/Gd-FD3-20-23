@@ -1,2 +1,2 @@
-export { Mouse } from "./mouse/Mouse";
-export { Timers } from "./timers/Timers";
+export { MousePage } from "./mouse/MousePage";
+export { TimersPage } from "./timers/TimersPage";

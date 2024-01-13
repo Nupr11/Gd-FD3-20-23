@@ -4,11 +4,16 @@
 }
 
 .buttonPanel,
-.timerPanel {
+.timerList {
+  color: #fff;
   padding: 16px;
   width: 100%;
   display: flex;
   justify-content: space-around;
   list-style-type: none;
-  background-color: #808080;
+  background-color: rgb(111, 111, 187);
+}
+
+.speed {
+  color: rgb(111, 111, 187);
 }
