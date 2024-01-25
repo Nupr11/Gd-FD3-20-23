@@ -1,0 +1,31 @@
+.page {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header,
+.main,
+.footer {
+  padding: 8px 16px;
+  display: flex;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+  background-color: rgba(242, 120, 92);
+  color: rgba(13, 96, 111);
+}
+
+.main {
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: rgba(13, 96, 111);
+  color: rgba(242, 120, 92);
+}
