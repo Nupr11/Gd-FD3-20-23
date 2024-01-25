@@ -1,0 +1,21 @@
+.photoList {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.photoCard {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  width: 250px;
+  border: 2px solid black;
+}
+
+h5 {
+  text-align: center;
+  height: 100%;
+}

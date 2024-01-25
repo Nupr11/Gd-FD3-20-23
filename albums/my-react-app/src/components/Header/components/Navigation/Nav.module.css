@@ -1,0 +1,16 @@
+.navLink {
+  font-size: 24px;
+  color: rgb(255, 255, 255, 0.7);
+  text-decoration: none;
+  transform: scale(1);
+  transition: 0.2s;
+}
+
+.navLink:hover {
+  transform: scale(1.1);
+  color: rgb(255, 255, 255, 1);
+}
+
+ul {
+  list-style-type: none;
+}

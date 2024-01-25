@@ -1,0 +1,18 @@
+.albumsInfo {
+  height: max-content;
+  padding: 1rem;
+  background-color: rgb(13, 96, 111);
+  border-radius: 20px;
+}
+
+.albumsInfo,
+.albumList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.albumList > li > a {
+  color: #fff;
+  text-decoration: none;
+}
