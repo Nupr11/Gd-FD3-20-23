@@ -24,7 +24,7 @@ export const App = () => {
           <Route path="albums/:id" element={<Album />} />
           <Route path="users" element={<PageUsers />} />
           <Route path="users/:id" element={<User />} />
-          <Route path="users/:id/:albumId" element={<Album />} />
+
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>

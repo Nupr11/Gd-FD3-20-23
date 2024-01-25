@@ -3,13 +3,14 @@ import { useParams } from "react-router-dom";
 import { Layout } from "../../../../../../components/Layout/Layout";
 import { Link } from "react-router-dom";
 import { UserAlbums, UserInfo } from "./components";
+import { ButtonBack } from "../../../../../../components/buttonBack";
 
 export const User = () => {
-  const { id } = useParams();
+  const { id, userId } = useParams();
 
   return (
     <Layout>
-      <Link to="/users">Back</Link>
+      <ButtonBack />
       <UserInfo className={styles.userInfo} userId={id}>
         <UserAlbums className={styles.albumList} userId={id} />
       </UserInfo>

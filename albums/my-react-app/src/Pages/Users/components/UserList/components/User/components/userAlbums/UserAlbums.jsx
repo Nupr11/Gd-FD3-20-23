@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { getAlbumsByUserId } from "../../../../../../../../api/requests";
 import { useData } from "../../../../../../../../hooks/useData";
 import styles from "./userAlbums.module.css";
+import { useParams } from "react-router-dom";
 
 export const UserAlbums = ({ userId }) => {
   const { data, loading, error } = useData(getAlbumsByUserId(userId), []);
@@ -16,14 +17,14 @@ export const UserAlbums = ({ userId }) => {
   const listTitle = <h2>Albums</h2>;
   const albumList = data.map((album) => (
     <li key={album.id}>
-      <Link to={`/users/${userId}/albums/${album.id}`}>{album.title}</Link>
+      <Link to={`/albums?userId=${album.userId}`}>{album.title}</Link>
     </li>
   ));
 
   return (
     <div className={styles.albumsInfo}>
       {listTitle}
-      <ul className={styles.albumList}>{albumList}</ul>
+      <ol className={styles.albumList}>{albumList}</ol>
     </div>
   );
 };

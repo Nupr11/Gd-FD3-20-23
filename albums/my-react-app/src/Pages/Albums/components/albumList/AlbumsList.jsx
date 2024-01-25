@@ -5,40 +5,44 @@ import { getAllAlbums, getAllPhotos } from "../../../../api/requests";
 
 export const AlbumsList = ({ className }) => {
   const {
-    data: albumsData,
-    loading: albumsLoading,
-    error: albumsError,
-  } = useData(getAllAlbums());
+    data: albums,
+    loading: loadingAlbums,
+    error: errorAlbums,
+  } = useData(getAllAlbums(), []);
   const {
-    data: photosData,
-    loading: photosLoading,
-    error: photosError,
-  } = useData(getAllPhotos());
-  console.log(photosData);
+    data: photos,
+    loading: loadingPhotos,
+    error: errorPhotos,
+  } = useData(getAllPhotos(), []);
 
-  if (albumsLoading || photosLoading) {
+  if (loadingAlbums || loadingPhotos) {
     return <div>Loading...</div>;
   }
 
-  if (albumsError || photosError) {
+  if (errorAlbums || errorPhotos) {
     return <div>Error fetching data</div>;
   }
 
-  const albumList = albumsData.map((album, index) => (
+  const albumList = albums.map((album, index) => (
     <li className={styles.card} key={album.id}>
       <Link to={`/albums/${album.id}`}>
         <figure className={styles.album}>
           <img
             width="200px"
             height="300px"
-            src={photosData[index].thumbnailUrl}
-            alt={album.title}
+            src={photos[album.id].thumbnailUrl}
+            alt={photos[album.id].id.title}
           />
-          <figcaption> {album.title}</figcaption>
+          <figcaption>{album.title}</figcaption>
         </figure>
       </Link>
     </li>
   ));
 
-  return <ul className={styles.albumList}>All albums: {albumList}</ul>;
+  return (
+    <section className={styles.section}>
+      <h2>All albums:</h2>
+      <ul className={styles.albumList}>{albumList}</ul>;
+    </section>
+  );
 };

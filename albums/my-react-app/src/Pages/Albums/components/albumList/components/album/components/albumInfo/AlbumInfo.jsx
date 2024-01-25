@@ -1,5 +1,6 @@
 import { getAlbumById } from "../../../../../../../../api/requests";
 import { useData } from "../../../../../../../../hooks/useData";
+import { Link } from "react-router-dom";
 import styles from "./albumInfo.module.css";
 
 export const AlbumInfo = ({ id, children }) => {
